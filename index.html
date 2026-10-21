@@ -1,6 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>O Prato do Dia</title>
+<script>
+// No telemovel o site e a propria app. Quem quiser ver esta pagina abre /?site.
+if (matchMedia("(max-width: 767px) and (pointer: coarse)").matches && !/[?&]site\b/.test(location.search)) {
+  location.replace("/app/");
+}
+</script>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -245,6 +251,7 @@ p{margin:0}
   <div class="nav-inner">
     <a class="nav-brand" href="#topo"><img src="logo-mark.png" alt="" width="22" height="22">O Prato do Dia</a>
     <ul class="nav-links">
+      <li><a href="/app/">Abrir a app</a></li>
       <li><a href="#descobrir">Descobrir</a></li>
       <li><a href="#hoje">Hoje</a></li>
       <li><a href="#restaurantes">Restaurantes</a></li>
@@ -261,6 +268,7 @@ p{margin:0}
     <p class="lede">O que se come hoje, já aqui ao lado.</p>
     <p class="fine">Prato, preço e até que horas. Publicado esta manhã pelo próprio restaurante.</p>
     <div class="linkrow">
+      <a class="chev" href="/app/">Abrir a app</a>
       <a class="chev" href="#descobrir">Ver como funciona</a>
       <a class="chev" href="#restaurantes">Sou restaurante</a>
     </div>
