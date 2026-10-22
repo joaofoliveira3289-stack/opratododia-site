@@ -271,6 +271,14 @@ p{margin:0}
 /* ---------- Split ---------- */
 .split{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;margin-top:44px}
 .split-art{display:flex;flex-direction:column;align-items:center}
+.faq{margin-top:34px;border-top:1px solid var(--hair)}
+.faq-item{border-bottom:1px solid var(--hair)}
+.faq-item summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;font-size:17px;font-weight:600;letter-spacing:-.01em;position:relative}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";position:absolute;right:4px;top:15px;font-size:22px;font-weight:400;color:var(--accent)}
+.faq-item[open] summary::after{content:"−"}
+.faq-item p{margin:0 0 18px;font-size:15px;color:var(--ink-2);line-height:1.5;max-width:680px}
+.faq-mais{margin-top:22px;font-size:15px;color:var(--ink-2)}
 .abrir-app{display:none}
 @media(max-width:767px){
   .abrir-app{
@@ -331,6 +339,7 @@ p{margin:0}
       <li><a href="#descobrir">Descobrir</a></li>
       <li><a href="#hoje">Hoje</a></li>
       <li><a href="#restaurantes">Restaurantes</a></li>
+      <li><a href="#perguntas">Perguntas</a></li>
       <li><a href="#especificacoes">Especificações</a></li>
       <li><a href="privacidade.html">Privacidade</a></li>
     </ul>
@@ -359,7 +368,7 @@ p{margin:0}
         <div class="app">
           <div class="app-head">
             <span class="app-title">Hoje</span>
-            <span class="app-place">Campo de Ourique</span>
+            <span class="app-place">Lourinhã</span>
           </div>
           <div class="app-search"><span aria-hidden="true">⌕</span> Pesquisar prato ou restaurante</div>
           <div class="app-chips">
@@ -549,7 +558,57 @@ p{margin:0}
   </div>
 </section>
 
-<section class="band" id="especificacoes">
+<section class="band" id="perguntas">
+  <div class="well">
+    <p class="eyebrow">Perguntas dos restaurantes</p>
+    <h2 class="h-sm">Antes de aderires.</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Quanto custa, e quando começo a pagar?</summary>
+        <p>Os primeiros três meses são grátis, a contar do dia em que o restaurante é aprovado. Depois, 10 € por mês ou 100 € por ano, sem IVA (regime de isenção, art. 53.º do CIVA). Durante o período grátis não pedimos dados de pagamento.</p>
+      </details>
+      <details class="faq-item">
+        <summary>A subscrição renova-se sozinha?</summary>
+        <p>Não. Nunca cobramos nada sem um pagamento feito por ti. Quando o período acaba, se não pagares, o plano simplesmente termina. Em “O meu plano” vês sempre até quando podes publicar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como pago?</summary>
+        <p>Na app, em “O meu plano”, ou pelo link que te enviarmos por email ou WhatsApp. Por MB Way, referência Multibanco ou cartão. Emitimos fatura de cada pagamento.</p>
+      </details>
+      <details class="faq-item">
+        <summary>E se deixar de pagar?</summary>
+        <p>A ficha do restaurante continua visível, com morada, contactos, horário e fotografias. Deixas apenas de publicar pratos do dia. O catálogo e as estatísticas ficam guardados e voltas a publicar logo que pagares.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como cancelo?</summary>
+        <p>Basta não pagar o período seguinte: não há fidelização nem multa. Se quiseres sair de vez, pede a eliminação da conta e apagamos o restaurante. Os períodos já pagos não são reembolsados.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso de saber de informática?</summary>
+        <p>Não. Funciona no browser do telemóvel ou do computador, sem instalar nada. Os pratos que já fizeste ficam no catálogo: no dia seguinte é escolher, confirmar o preço e publicar. Também podes publicar uma fotografia da ementa.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quem vê as estatísticas do meu restaurante?</summary>
+        <p>Só tu. Vês totais, como quantas pessoas abriram a ficha ou o guardaram nos favoritos, e nunca quem foi. Nenhum outro restaurante vê os teus números.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Porque é que o registo é revisto antes de aparecer?</summary>
+        <p>Para garantir que quem procura almoço só encontra restaurantes reais, com morada e contactos verdadeiros. Revemos cada registo uma vez, antes de ficar visível.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Tenho mais do que um restaurante. Como faço?</summary>
+        <p>Cada conta gere um restaurante. Para um segundo restaurante, cria outra conta, com outro email. Cada um tem os seus próprios três meses grátis.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Os clientes pagam alguma coisa?</summary>
+        <p>Nunca. Para quem procura onde almoçar, a app é grátis e nem é preciso conta para ver os pratos. Também não aceitamos encomendas nem pagamentos de clientes: o cliente vai ao restaurante ou liga-lhe.</p>
+      </details>
+    </div>
+    <p class="faq-mais">Outra dúvida? Escreve para <a href="mailto:geral@opratododia.pt">geral@opratododia.pt</a>. As regras completas estão nos <a href="termos.html">Termos para restaurantes</a>.</p>
+  </div>
+</section>
+
+<section class="band band-alt" id="especificacoes">
   <div class="well">
     <p class="eyebrow">Especificações</p>
     <h2 class="h-sm">O que é preciso.</h2>
@@ -569,7 +628,7 @@ p{margin:0}
   </div>
 </section>
 
-<section class="band band-alt" id="privacidade">
+<section class="band" id="privacidade">
   <div class="well">
     <p class="eyebrow">Privacidade</p>
     <h2 class="h-sm" style="max-width:720px">Saber onde estás serve para te mostrar o almoço. Mais nada.</h2>
