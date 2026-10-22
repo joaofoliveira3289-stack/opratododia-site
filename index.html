@@ -13,6 +13,45 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://opratododia.pt/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://opratododia.pt/#organizacao",
+      "name": "O Prato do Dia",
+      "url": "https://opratododia.pt/",
+      "logo": "https://opratododia.pt/logo.png",
+      "email": "geral@opratododia.pt",
+      "address": { "@type": "PostalAddress", "addressLocality": "Lourinhã", "addressCountry": "PT" },
+      "sameAs": [
+        "https://www.facebook.com/opratododia.pt",
+        "https://www.instagram.com/opratododia.pt.oficial/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://opratododia.pt/#site",
+      "name": "O Prato do Dia",
+      "url": "https://opratododia.pt/",
+      "inLanguage": "pt-PT",
+      "publisher": { "@id": "https://opratododia.pt/#organizacao" }
+    },
+    {
+      "@type": "WebApplication",
+      "name": "O Prato do Dia",
+      "url": "https://opratododia.pt/app/",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Web, Android",
+      "inLanguage": "pt-PT",
+      "description": "O prato do dia dos restaurantes perto de ti: prato, preço e até que horas, publicado pelo próprio restaurante.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Grátis para quem procura almoço" },
+      "publisher": { "@id": "https://opratododia.pt/#organizacao" }
+    }
+  ]
+}
+</script>
 <script>
 // No telemovel o site e a propria app, a comecar pelo ecra de entrada.
 // Quem quiser ver esta pagina abre /?site.
@@ -224,7 +263,14 @@ p{margin:0}
 
 /* ---------- Split ---------- */
 .split{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;margin-top:44px}
-.split-art{display:flex;justify-content:center}
+.split-art{display:flex;flex-direction:column;align-items:center}
+.exemplo{margin:14px 0 0;font-size:12px;color:var(--ink-2);text-align:center}
+.hero-stage{flex-direction:column;align-items:center}
+.preco{margin-top:26px;padding:18px 20px;border:1px solid var(--hair);border-radius:14px;background:var(--ground)}
+.preco p{margin:0}
+.preco-top{font-size:15px;color:var(--accent)}
+.preco-val{font-size:19px;font-weight:600;letter-spacing:-.01em;margin-top:4px !important}
+.preco-fine{font-size:13.5px;color:var(--ink-2);line-height:1.45;margin-top:8px !important}
 @media(max-width:820px){.split{grid-template-columns:1fr;gap:38px}.split-art{order:-1}}
 .steps{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column}
 .steps li{display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:baseline;padding:15px 0;border-top:1px solid var(--hair)}
@@ -349,6 +395,7 @@ p{margin:0}
         </div>
       </div>
     </div>
+    <p class="exemplo">Imagem ilustrativa: restaurantes, pratos e preços de exemplo.</p>
   </div>
 </header>
 
@@ -432,7 +479,14 @@ p{margin:0}
           <li><span class="n">3</span><span class="t">Publica<small>Dois toques não criam dois pratos. A garantia está na base de dados, não só no botão.</small></span></li>
           <li><span class="n">4</span><span class="t">Marca esgotado quando acabar<small>Um toque. Sai da procura na hora.</small></span></li>
         </ol>
+        <div class="preco">
+          <p class="preco-top"><strong>3 meses grátis</strong> a contar da aprovação.</p>
+          <p class="preco-val">Depois, <strong>10 € por mês</strong> ou <strong>100 € por ano</strong>.</p>
+          <p class="preco-fine">Sem IVA (isento, art. 53.º do CIVA). Sem fidelização nem renovação automática: pagas só quando quiseres continuar. Para quem procura almoço é sempre grátis.</p>
+        </div>
         <div class="linkrow">
+          <a class="chev" href="/app/welcome">Registar o restaurante</a>
+          <a class="chev" href="termos.html">Termos para restaurantes</a>
           <a class="chev" href="#especificacoes">Ver o que é preciso</a>
         </div>
       </div>
@@ -472,6 +526,7 @@ p{margin:0}
             </div>
           </div>
         </div>
+        <p class="exemplo">Imagem ilustrativa, com pratos de exemplo.</p>
       </div>
     </div>
   </div>
@@ -484,6 +539,7 @@ p{margin:0}
     <div class="specs">
       <div class="spec-row"><div class="spec-k">Plataformas</div><div class="spec-v">No browser do telemóvel ou do computador, em opratododia.pt. App Android em breve</div></div>
       <div class="spec-row"><div class="spec-k">Conta de cliente</div><div class="spec-v">Não é precisa para ver os pratos. Opcional, para guardar os favoritos em qualquer aparelho</div></div>
+      <div class="spec-row"><div class="spec-k">Preço para restaurantes</div><div class="spec-v">3 meses grátis; depois 10 €/mês ou 100 €/ano, sem IVA (isento, art. 53.º). Sem fidelização</div></div>
       <div class="spec-row"><div class="spec-k">Conta de restaurante</div><div class="spec-v">Email confirmado e aprovação da moderação antes de publicar</div></div>
       <div class="spec-row"><div class="spec-k">Telefone</div><div class="spec-v">Contacto opcional. Não é exigida verificação por SMS</div></div>
       <div class="spec-row"><div class="spec-k">Localização</div><div class="spec-v">Opcional. Sem autorização, a app funciona sem distâncias</div></div>
@@ -524,7 +580,7 @@ p{margin:0}
 
 <footer class="foot">
   <div class="well">
-    <p class="foot-note">Os preços e horários apresentados na app são publicados pelos próprios restaurantes e podem mudar ao longo do dia. O Prato do Dia não aceita encomendas nem pagamentos: mostra o que há hoje e liga-te ao restaurante.</p>
+    <p class="foot-note">Os preços e horários apresentados na app são publicados pelos próprios restaurantes e podem mudar ao longo do dia. O Prato do Dia não aceita encomendas nem pagamentos dos clientes: mostra o que há hoje e liga-te ao restaurante.</p>
     <div class="foot-cols">
       <div>
         <h4>Descobrir</h4>
@@ -550,7 +606,7 @@ p{margin:0}
           <li><a href="#especificacoes">Especificações</a></li>
           <li><a href="privacidade.html">Conta e dados</a></li>
           <li><a href="eliminar-conta.html">Eliminar conta</a></li>
-          <li><a href="#topo">Contactar</a></li>
+          <li><a href="mailto:geral@opratododia.pt">Contactar</a></li>
         </ul>
       </div>
       <div>
@@ -562,8 +618,13 @@ p{margin:0}
       </div>
     </div>
     <div class="foot-legal">
+      <span>O Prato do Dia é um serviço de João Francisco Gomes Oliveira · NIF 237962616 · Lourinhã, Portugal</span>
+      <a href="mailto:geral@opratododia.pt">geral@opratododia.pt</a>
+      <a href="https://www.facebook.com/opratododia.pt" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/opratododia.pt.oficial/" rel="noopener">Instagram</a>
+    </div>
+    <div class="foot-legal">
       <span>Copyright © 2026 O Prato do Dia. Todos os direitos reservados.</span>
-      <span>Portugal</span>
     </div>
   </div>
 </footer>
