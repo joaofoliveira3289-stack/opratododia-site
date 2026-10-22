@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Termos para restaurantes — O Prato do Dia</title>
+<meta name="description" content="As regras para um restaurante publicar n’O Prato do Dia: período grátis, planos, pagamento, conteúdos e cancelamento.">
+<link rel="icon" href="icone.png">
+<style>
+:root{
+  --ground:#ffffff;
+  --ground-alt:#f4f6f5;
+  --ink:#1d1d1f;
+  --ink-2:#6e6e73;
+  --accent:#2F6B3E;
+  --hair:#d2d2d7;
+  --nav-bg:rgba(251,252,251,.72);
+  --font-display:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --well:760px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ground:#000000;
+    --ground-alt:#131314;
+    --ink:#f5f5f7;
+    --ink-2:#86868b;
+    --accent:#7CBE8B;
+    --hair:#2a2a2c;
+    --nav-bg:rgba(10,10,11,.72);
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--ground);color:var(--ink);
+  font-family:var(--font-display);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.well{max-width:var(--well);margin:0 auto;padding:0 22px}
+.nav{
+  position:sticky;top:0;z-index:50;background:var(--nav-bg);
+  backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid var(--hair);
+}
+.nav-inner{max-width:980px;margin:0 auto;padding:0 22px;height:52px;display:flex;align-items:center;gap:22px}
+.nav-brand{font-weight:600;font-size:15px;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:9px}
+.nav-brand img{width:22px;height:22px;display:block}
+.nav-links{list-style:none;display:flex;gap:20px;margin:0;padding:0;font-size:13px}
+.nav-links a{color:var(--ink-2);text-decoration:none}
+.nav-links a:hover{color:var(--ink)}
+
+main{padding:52px 0 72px}
+h1{font-size:clamp(30px,5.4vw,42px);line-height:1.1;letter-spacing:-.02em;margin:0 0 10px;text-wrap:balance}
+.sub{color:var(--ink-2);margin:0 0 6px;font-size:15px}
+h2{font-size:21px;letter-spacing:-.01em;margin:44px 0 10px;text-wrap:balance}
+h3{font-size:16px;margin:26px 0 6px}
+p,li{color:var(--ink)}
+p{margin:0 0 15px}
+ul{padding-left:20px;margin:0 0 15px}
+li{margin:5px 0}
+a{color:var(--accent)}
+strong{font-weight:600}
+
+.destaque{
+  background:var(--ground-alt);border:1px solid var(--hair);border-radius:14px;
+  padding:18px 20px;margin:24px 0;
+}
+.destaque p:last-child{margin-bottom:0}
+.caixa-passos{counter-reset:p;list-style:none;padding:0;margin:0 0 15px}
+.caixa-passos li{counter-increment:p;display:grid;grid-template-columns:26px 1fr;gap:12px;margin:14px 0}
+.caixa-passos li::before{
+  content:counter(p);font-size:13px;font-weight:600;color:var(--accent);
+  border-top:2px solid var(--accent);padding-top:4px;
+}
+.morada{
+  display:inline-block;font-weight:600;font-size:18px;color:var(--accent);
+  text-decoration:none;word-break:break-all;
+}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:0 0 15px}
+.rolar{overflow-x:auto}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--hair);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);font-weight:600;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+
+.foot{border-top:1px solid var(--hair);padding:26px 0 44px;font-size:13px;color:var(--ink-2)}
+.foot a{color:var(--ink-2)}
+.foot-linhas{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html"><img src="icone.png" alt=""> O Prato do Dia</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="privacidade.html">Privacidade</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="well">
+  <h1>Termos para restaurantes</h1>
+  <p class="sub">Em vigor a partir de 23 de outubro de 2026.</p>
+
+  <p>Estes termos aplicam-se a quem regista e gere um restaurante n’O Prato do Dia. Quem só procura onde almoçar não paga nada e não precisa de os ler.</p>
+
+  <div class="destaque">
+    <p><strong>Em resumo:</strong> três meses grátis a contar da aprovação. Depois, 10 € por mês ou 100 € por ano, sem IVA (regime de isenção). Nada se renova sozinho: pagas quando quiseres continuar. Se não pagares, a ficha continua visível, mas deixas de publicar pratos do dia.</p>
+  </div>
+
+  <h2>Quem presta o serviço</h2>
+  <p>O Prato do Dia é um serviço de João Francisco Gomes Oliveira, NIF 237962616, com domicílio em Rua Nascer do Sol, 2530-904 Atalaia, Lourinhã, Portugal. Contacto: <a href="mailto:geral@opratododia.pt">geral@opratododia.pt</a>.</p>
+
+  <h2>O que o serviço faz</h2>
+  <p>A app mostra aos clientes os pratos do dia, os preços e os horários que o restaurante publica, junto com a ficha (morada, contactos, horário, fotografias, carta). Não aceita encomendas, reservas nem pagamentos dos clientes: o cliente vai ao restaurante ou liga-lhe.</p>
+  <p>Não garantimos um número mínimo de visitas ou de clientes. No painel vês os totais que a app regista — por exemplo, quantas pessoas abriram a ficha — para julgares por ti se compensa.</p>
+
+  <h2>Registo e aprovação</h2>
+  <ul>
+    <li>Quem regista o restaurante tem de ter poderes para o representar e dar dados verdadeiros: nome, morada, contactos e localização no mapa.</li>
+    <li>Cada conta gere um restaurante. Quem tem acesso à conta age em nome do restaurante; guarda a palavra-passe.</li>
+    <li>Antes de aparecer na app, o registo é revisto. Podemos recusá-lo se os dados estiverem incompletos, não corresponderem a um restaurante real ou violarem estes termos, e dizemos-te porquê.</li>
+  </ul>
+
+  <h2>Período grátis</h2>
+  <p>Cada restaurante tem <strong>três meses grátis</strong> a contar do dia em que é aprovado. Durante esse período usa a app inteira, sem limites e sem dar dados de pagamento. O período grátis é um por restaurante: não recomeça se o restaurante for suspenso e reativado, nem com um registo novo do mesmo restaurante.</p>
+
+  <h2>Planos e preços</h2>
+  <div class="rolar">
+    <table>
+      <thead><tr><th>Plano</th><th>Preço</th></tr></thead>
+      <tbody>
+        <tr><td>Mensal</td><td>10,00 €</td></tr>
+        <tr><td>Anual</td><td>100,00 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>O prestador está no regime de isenção de IVA (artigo 53.º do Código do IVA), por isso o preço é o valor final e as faturas não têm IVA. Se o volume de negócios obrigar a passar ao regime normal, o IVA passa a acrescer ao preço, à taxa em vigor; avisamos por email pelo menos 30 dias antes, e isso nunca afeta um período já pago. Pode haver ofertas pontuais, como um preço de lançamento no plano anual, com as condições indicadas no próprio pedido de pagamento.</p>
+  <p>Se o preço mudar, avisamos por email pelo menos 30 dias antes. A mudança nunca afeta um período já pago nem um pedido de pagamento já enviado.</p>
+
+  <h2>Pagamento</h2>
+  <ul>
+    <li>Pagas a partir da app, em <em>O meu plano</em>, ou pelo link que te enviarmos por email ou WhatsApp. Cada pedido tem uma página própria com o valor e o prazo.</li>
+    <li>Os pagamentos são processados pela Easypay, instituição de pagamento autorizada pelo Banco de Portugal, por MB Way, Multibanco ou cartão. Não vemos nem guardamos os dados do cartão.</li>
+    <li>Um pedido de pagamento é válido durante 14 dias. Se expirar, pedes outro.</li>
+    <li>O período pago começa quando acaba o que já tens (o período grátis ou o pago anterior) ou, se já tiver acabado, no dia do pagamento. Pagar antes do tempo não te faz perder dias.</li>
+    <li>Emitimos fatura de cada pagamento com os dados fiscais que nos indicares.</li>
+  </ul>
+
+  <h2>Sem renovação automática</h2>
+  <p>Nenhum plano se renova sozinho e nunca cobramos nada sem um pagamento feito por ti. Em <em>O meu plano</em> vês sempre até quando podes publicar. Se não pagares, o plano simplesmente termina.</p>
+
+  <h2>Quando o período termina</h2>
+  <p>Se o período grátis ou o período pago terminarem sem novo pagamento:</p>
+  <ul>
+    <li>a ficha do restaurante continua visível, com morada, contactos, horário e fotografias;</li>
+    <li>deixas de poder publicar pratos do dia e ementas do dia;</li>
+    <li>os teus dados, o catálogo de pratos e as estatísticas ficam guardados, e voltas a publicar logo que pagares.</li>
+  </ul>
+
+  <h2>Cancelamento e reembolsos</h2>
+  <p>Podes deixar de usar o serviço quando quiseres: basta não pagar o período seguinte, ou eliminar a conta em <a href="eliminar-conta.html">Eliminar conta</a>, o que apaga também o restaurante.</p>
+  <p>Os períodos já pagos <strong>não são reembolsados</strong>, nem total nem parcialmente, incluindo quando cancelas a meio. O plano continua ativo até ao fim do período pago. Os três meses grátis existem precisamente para experimentares antes de pagar.</p>
+  <p>A exceção é uma falha nossa: se o serviço ficar indisponível mais de 7 dias seguidos por causa que nos seja imputável, prolongamos o teu período pago pelo mesmo número de dias.</p>
+
+  <h2>O que publicas</h2>
+  <ul>
+    <li>És responsável pelo que publicas: pratos, preços, horários, fotografias, descrições e a informação sobre alergénios que decidires indicar. Deve ser verdadeiro e estar atualizado. O preço que publicas é o preço que praticas.</li>
+    <li>Só publicas fotografias e textos que sejam teus ou que tenhas autorização para usar.</li>
+    <li>Não é permitido publicar conteúdo enganador, ofensivo ou ilegal, publicidade a terceiros, nem dados pessoais de outras pessoas.</li>
+    <li>Autorizas-nos, gratuitamente e enquanto o restaurante estiver na app, a mostrar esse conteúdo na app e no site, e a usá-lo para divulgar O Prato do Dia (por exemplo, numa publicação nas redes sociais sobre restaurantes aderentes). Os direitos continuam a ser teus. Se não quiseres que o usemos na divulgação, diz-nos e deixamos de o fazer.</li>
+  </ul>
+
+  <h2>Facebook</h2>
+  <p>Se ligares uma Página Facebook para importar ementas, importamos só as publicações que escolheres. Podes desligar a Página a qualquer momento. As regras da Meta continuam a aplicar-se à tua Página.</p>
+
+  <h2>Suspensão</h2>
+  <p>Podemos retirar conteúdos ou suspender um restaurante que viole estes termos — por exemplo, preços falsos, conteúdo de terceiros sem autorização, ou um restaurante que já não existe. Salvo em casos graves ou ilegais, avisamos primeiro e damos-te oportunidade de corrigir. Uma suspensão por violação dos termos não dá direito a reembolso; uma suspensão sem fundamento prolonga o teu período pago pelo tempo que durou.</p>
+
+  <h2>Responsabilidade</h2>
+  <p>Fazemos o possível para que a app esteja disponível e correta, mas não garantimos que nunca tenha falhas ou interrupções. Não somos responsáveis pelo que os restaurantes publicam, nem por perdas indiretas como lucros cessantes. Salvo dolo ou culpa grave, a nossa responsabilidade perante um restaurante está limitada ao valor que nos pagou nos últimos 12 meses.</p>
+
+  <h2>Dados pessoais</h2>
+  <p>O tratamento de dados pessoais, incluindo os de pagamento e faturação, está descrito na <a href="privacidade.html">Política de Privacidade</a>.</p>
+
+  <h2>Alterações a estes termos</h2>
+  <p>Se mudarmos estes termos de forma relevante, avisamos por email pelo menos 30 dias antes. Se não concordares, podes deixar de usar o serviço antes de a alteração entrar em vigor; se estiveres a meio de um período pago e a alteração te prejudicar, devolvemos a parte proporcional desse período.</p>
+
+  <h2>Lei e litígios</h2>
+  <p>Estes termos regem-se pela lei portuguesa. Antes de mais, escreve-nos para <a href="mailto:geral@opratododia.pt">geral@opratododia.pt</a>: tentamos resolver qualquer problema a bem. Não sendo possível, é competente o tribunal da comarca de Lisboa Norte.</p>
+</main>
+
+<footer class="foot">
+  <div class="well foot-linhas">
+    <span>© 2026 O Prato do Dia</span>
+    <a href="index.html">Início</a>
+    <a href="privacidade.html">Privacidade</a>
+    <a href="eliminar-conta.html">Eliminar conta</a>
+    <span>Portugal</span>
+  </div>
+</footer>
+
+</body>
+</html>
