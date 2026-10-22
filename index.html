@@ -53,11 +53,18 @@
 }
 </script>
 <script>
-// No telemovel o site e a propria app, a comecar pelo ecra de entrada.
-// Quem quiser ver esta pagina abre /?site.
-if (matchMedia("(max-width: 767px) and (pointer: coarse)").matches && !/[?&]site\b/.test(location.search)) {
-  location.replace("/app/welcome");
-}
+// No telemovel, quem ja usou a app (a app grava "opd_app" ao abrir) vai
+// direto para ela. Quem nunca a abriu ve esta pagina, com o botao "Abrir a
+// app" fixo em baixo. Nao redirecionar toda a gente: o Google indexa como
+// telemovel e, com o redirecionamento, so via o arranque vazio da app.
+// /?site mostra sempre esta pagina.
+try {
+  if (matchMedia("(max-width: 767px) and (pointer: coarse)").matches &&
+      !/[?&]site\b/.test(location.search) &&
+      localStorage.getItem("opd_app") === "1") {
+    location.replace("/app/welcome");
+  }
+} catch (e) {}
 </script>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -264,6 +271,16 @@ p{margin:0}
 /* ---------- Split ---------- */
 .split{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;margin-top:44px}
 .split-art{display:flex;flex-direction:column;align-items:center}
+.abrir-app{display:none}
+@media(max-width:767px){
+  .abrir-app{
+    display:block;position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;
+    padding:15px 18px;border-radius:14px;background:#2F6B3E;color:#fff;
+    font-size:17px;font-weight:600;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.18);
+  }
+  .abrir-app:hover{color:#fff}
+  .foot{padding-bottom:110px}
+}
 .exemplo{margin:14px 0 0;font-size:12px;color:var(--ink-2);text-align:center}
 .hero-stage{flex-direction:column;align-items:center}
 .preco{margin-top:26px;padding:18px 20px;border:1px solid var(--hair);border-radius:14px;background:var(--ground)}
@@ -628,3 +645,5 @@ p{margin:0}
     </div>
   </div>
 </footer>
+
+<a class="abrir-app" href="/app/">Abrir a app</a>
