@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
 <title>O Prato do Dia</title>
 <meta name="description" content="O prato do dia dos restaurantes perto de ti: prato, preço e até que horas, publicado pelo próprio restaurante. Sem conta, sem encomendas.">
 <meta property="og:type" content="website">
@@ -52,20 +53,6 @@
   ]
 }
 </script>
-<script>
-// No telemovel, quem ja usou a app (a app grava "opd_app" ao abrir) vai
-// direto para ela. Quem nunca a abriu ve esta pagina, com o botao "Abrir a
-// app" fixo em baixo. Nao redirecionar toda a gente: o Google indexa como
-// telemovel e, com o redirecionamento, so via o arranque vazio da app.
-// /?site mostra sempre esta pagina.
-try {
-  if (matchMedia("(max-width: 767px) and (pointer: coarse)").matches &&
-      !/[?&]site\b/.test(location.search) &&
-      localStorage.getItem("opd_app") === "1") {
-    location.replace("/app/welcome");
-  }
-} catch (e) {}
-</script>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -81,6 +68,7 @@ try {
 </style>
 <style>
 :root{
+  color-scheme:only light;
   --ground:#ffffff;
   --ground-alt:#f4f6f5;
   --ground-ink:#000000;
@@ -95,37 +83,12 @@ try {
   --card:#ffffff;
   --shadow:0 4px 24px rgba(0,0,0,.08);
   --nav-bg:rgba(251,252,251,.72);
-  --font-display:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-display:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
   --well:980px;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --ground:#000000;
-    --ground-alt:#0c0d0c;
-    --ink:#f5f5f7;
-    --ink-2:#86868b;
-    --accent:#5FBF77;
-    --hair:#2a2a2c;
-    --tile:#111312;
-    --card:#141614;
-    --shadow:0 4px 28px rgba(0,0,0,.6);
-    --nav-bg:rgba(10,11,10,.72);
-  }
-}
-:root[data-theme="dark"]{
-  --ground:#000000;
-  --ground-alt:#0c0d0c;
-  --ink:#f5f5f7;
-  --ink-2:#86868b;
-  --accent:#5FBF77;
-  --hair:#2a2a2c;
-  --tile:#111312;
-  --card:#141614;
-  --shadow:0 4px 28px rgba(0,0,0,.6);
-  --nav-bg:rgba(10,11,10,.72);
 }
 
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{
   font-family:var(--font-display);
   background:var(--ground);
@@ -153,13 +116,14 @@ p{margin:0}
   max-width:var(--well);margin:0 auto;padding:0 22px;
   height:48px;display:flex;align-items:center;gap:28px;
 }
-.nav-brand{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.nav-brand{display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
 .nav-brand:hover{text-decoration:none;opacity:.7}
 .nav-brand img{width:22px;height:22px;display:block}
 .nav-links{display:flex;gap:26px;margin-left:auto;list-style:none;padding:0;margin-block:0}
-.nav-links a{font-size:12px;color:var(--ink);opacity:.86;letter-spacing:0}
+.nav-links a{font-size:12px;white-space:nowrap;color:var(--ink);opacity:.86;letter-spacing:0}
 .nav-links a:hover{opacity:1;text-decoration:none}
-@media(max-width:700px){.nav-links{gap:16px}.nav-links li:nth-child(n+4){display:none}}
+@media(max-width:700px){.nav-links{gap:14px}.nav-links li:nth-child(n+4){display:none}}
+@media(max-width:400px){.nav-links li:nth-child(n+2){display:none}}
 
 /* ---------- Bandas ---------- */
 .band{padding:78px 22px}
